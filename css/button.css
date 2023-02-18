@@ -1,0 +1,91 @@
+/**
+ * Button
+ */
+
+
+button,
+input[type=submit],
+input[type=button],
+input[type=reset],
+[role=button] {
+
+
+  -webkit-appearance: button;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  
+  box-sizing: border-box;
+  padding: 0 1rem;
+  display: inline-block;
+  color: var(--primary-inverse-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary--color);
+  height: var(--form-element-height);
+  line-height: calc(var(--form-element-height) - 2px);
+  border-radius: var(--form-element-border-radius);
+  transition: var(--transition);
+  outline: none;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  text-transform: none;
+  text-decoration: none;
+  box-shadow: none;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+:is(
+  button,
+  input[type=submit],
+  input[type=button],
+  input[type=reset],
+  [role=button]
+  ):is([aria-current], :hover, :active, :focus) {
+  background-color: var(--primary-dark-color);
+  border-color: var(--primary-dark-color);
+  box-shadow: var(--form-element-focus-outline-boxshadow);
+}
+
+:is(
+  button,
+  [type=submit],
+  [type=button],
+  [type=reset],
+  [role=button]
+  )[disabled],
+fieldset[disabled] :is(
+  button,
+  [type=submit],
+  [type=button],
+  [type=reset],
+  [role=button]
+  ),
+a[role=button]:not([href]) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+:is(
+  button,
+  input[type=submit],
+  input[type=button],
+  input[type=reset],
+  [role=button]
+).ghost {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+:is(
+  button,
+  input[type=submit],
+  input[type=button],
+  input[type=reset],
+  [role=button]
+).ghost:is([aria-current], :hover, :active, :focus) {
+  background-color: transparent;
+  color: var(--primary-hover-color);
+}

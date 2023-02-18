@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* 
+var(--tg-color-scheme) [light|dark]
+var(--tg-viewport-height)
+var(--tg-viewport-stable-height)
+
+
+var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-text-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color)
+var(--tg-theme-secondary-bg-color) 
+*/
+
+/* Light-blue Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+
+/* Theming */
+/*
+--theme-primary-color
+--theme-primary-dark-color
+--theme-primary-tarnsparent-color
+--theme-primary-inverse-color
+--theme-secondary-color
+--theme-bg-color
+--theme-bg-secondary-color
+--theme-text-color
+--theme-text-hint-color
+--theme-viewport-height
+*/
+
+
+
+:root,
+[data-theme] {
+  --default-primary-color: #52a8eb;
+  --default-primary-transparent-color: #52a8eb33;
+  --default-primary-dark-color: #3b9de8;
+  --default-primary-inverse-color: #fff;
+  --default-secondary-color: #3489e5;
+
+  --default-bg-color: #ffffff;
+  --default-bg-secondary-color: #f0f0f0;
+  --default-text-color: #333333;
+  --default-text-hint-color: #a8a8a8;
+  --default-viewport-height: 100vh;
+
+  --primary-color: var(--theme-primary-color, var(--default-primary-color));
+  --primary-dark-color: var(--theme-primary-dark-color, var(--default-primary-dark-color));
+  --primary-inverse-color: var(--theme-primary-inverse-color, var(--default-primary-inverse-color));
+  --primary-transparent-color: var(--theme-primary-transparent-color, var(--default-primary-transparent-color));
+  --secondary-color: var(--theme-secondary-color, var(--default-secondary-color));
+
+  --bg-color: var(--theme-bg-color, var(--default-bg-color));
+  --bg-secondary-color: var(--theme-bg-secondary-color, var(--default-bg-secondary-color));
+  --text-color: var(--theme-text-color, var(--default-text-color));
+  --text-hint-color: var(--theme-text-hint-color, var(--default-text-hint-color));
+
+  --viewport-height: var(--theme-viewport-height, var(--default-viewport-height));
+}
+
+[data-theme=dark] {
+  --default-primary-color: #52a8eb;
+  --default-primary-transparent-color: #52a8eb33;
+  --default-primary-dark-color: #3b9de8;
+  --default-primary-inverse-color: #fff;
+  --default-secondary-color: #60ace2;
+  
+  --default-bg-color: #1d2834;
+  --default-bg-secondary-color: #151f28;
+  --default-text-color: #ffffff;
+  --default-text-hint-color: #636e7a;
+}
+
+:root,
+[data-theme] {
+  --link-color: var(--secondary-color);
+  --form-element-focus-outline-boxshadow: 0 0 0 3px var(--primary-transparent-color);
+  --form-element-border: 1px solid var(--text-hint-color);
+  --form-element-focus-border: 1px solid var(--primary-color);
+  --form-element-border-radius: .4rem;
+  --form-element-bg-color: var(--bg-secondary-color);
+  
+  --form-element-invalid-border-color: #b71c1c;
+  --form-element-invalid-active-border-color: #c62828;
+  --form-element-invalid-focus-color: rgba(198, 40, 40, 0.25);
+  --form-element-valid-border-color: #2e7d32;
+  --form-element-valid-active-border-color: #388e3c;
+  --form-element-valid-focus-color: rgba(56, 142, 60, 0.25);
+  
+  --transition: .2s ease-in-out;
+  --font-family: system-ui, -apple-system, Roboto, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  font-family: var(--font-family);
+  color: var(--text-color);
+  font-size: 1em;
+}

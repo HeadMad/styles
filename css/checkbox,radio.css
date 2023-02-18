@@ -1,0 +1,50 @@
+[type=checkbox],
+[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding:0;
+  background-color: var(--bg-secondary-color);
+  border: 2px solid var(--text-hint-color);
+  font-size: inherit;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+}
+
+:is([type=checkbox], [type=radio])::-ms-check {
+  display: none;
+}
+
+:is([type=checkbox], [type=radio]):is(
+  :active,
+  :focus
+  ) {
+    box-shadow: var(--form-element-focus-outline-boxshadow);
+  }
+
+:is([type=checkbox], [type=radio]):is(
+  [aria-invalid=false],
+  :checked[aria-invalid=false]
+) {
+  border-color: var(--form-element-valid-border-color);
+}
+
+:is([type=checkbox], [type=radio]):is(
+  [aria-invalid=true],
+  :checked[aria-invalid=true]
+) {
+  border-color: var(--form-element-invalid-border-color);
+}
+
+:is([type=checkbox], [type=radio]) + * {
+  display: inline-block;
+  margin-right: 0.4rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  vertical-align: middle;
+}
